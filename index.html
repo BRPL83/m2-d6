@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-COMMERCE MACARENA S.A.</title>
+    <style> 
+        .amazon-link{   
+            color:blue;
+            font-weight: bold;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id='titolo'> MACARENA</h1>
+    <button onclick='cambiaTitolo()'>Cambia Titolo</button> <!--Ho aggiunto un bottone per far cambiare il titolo su html-->
+    <script>                                                
+        function cambiaTitolo() {                           //Qui ho creato la funzione cambiaTitolo()
+            let nuovoTitolo = "TURBO MACARENA!";            //Mi piaciono gli esercizi con la parola Macarena :D 
+            document.getElementById("titolo").innerHTML = nuovoTitolo;
+        }
+    </script>
+    <button onclick='cambiaColoreBackground()'>Cambia Colore di Background</button> <!--Bottone per cliccare ed effettuare il-->
+    <script>                                                                        //cambio colore a scelta    
+        function cambiaColoreBackground(){
+            let nuovoColore = prompt('Inserisci un colore');    //Utilizzo la funzione cambiaColoreBackground ed utilizzo il
+            document.body.style.backgroundColor = nuovoColore;  //il metodo prompt() per modificare il colore
+        }                                                       //insieme al variabile nuovoColore
+    </script>
+        <div>
+            <table>
+                <tr>
+                    <th>Immagine</th>
+                    <th colspan="2">Prodotto</th>
+                    <th>Descrizione</th>
+                    <th>Prezzo</th>
+                </tr>
+                <tr>
+                    <td><img src='img/prodotto1.jpg' alt='echodot_amazon' class='amazon-image'></td><br>
+                    <td colspan="2" align="center">ECHO DOT 5ta Generazione Amazon</td>
+                    <td><a href='https://is.gd/Er3aTg'class='amazon-link'>Modello 2022 | Altoparlante Bluetooth intelligente con integrazione Alexa | Antracite</a>
+                    <form>
+                        <label for='commento'>Lascia un commento:</label><br>
+                        <textarea id='commento' name='commento' rows='4' cols='50'></textarea>
+                        <input type='submit' value='Invia'>
+                    </form>
+                    </td>
+                    <td>€ 42,98</td>
+                </tr>     
+                <tr>
+                    <td><img src='img/prodotto2.jpg' alt='cuffie_jbl'class="amazon-image"></td><br>
+                    <td colspan="2" align="center">CUFFIE JBL 510BT</td>
+                    <td><a href='https://is.gd/S3auFk' class='amazon-link'>JBL Tune 510BT Cuffie On-Ear Wireless, Bluetooth 5.0, Pieghevole, Microfono Integrato, Connessione Multipoint e ad Assistente Vocale, fino a 40 Ore di Autonomia e Ricarica Veloce, Nero</a>
+                    <form>
+                        <label for='commento'>Lascia un commento:</label><br>
+                        <textarea id='commento' name='commento' rows='4' cols='50'></textarea>
+                        <input type='submit' value='Invia'>
+                    </form>
+                    </td>
+                    <td>€ 26,71</td> 
+                </tr>
+                <tr>
+                    <td><img src='img/prodotto3.jpg' alt='caricatore_portatile_axneb'class="amazon-image"></td><br>
+                    <td colspan="2" align="center">POWER BANK 13800mAh AXNEB</td>
+                    <td><a href='https://is.gd/KqKUE0'class='amazon-link'>AXNEB Power Bank 13800mAh,Ultra Sottile & Leggero Caricatore Portatile con Display LCD,3A PD USB C Ingressi&Uscite Powerbank con Torcia LED Batteria Esterna per iPhone Samsung Huawei Xiaomi ECC-Nero</a>
+                    <form>
+                        <label for='commento'>Lascia un commento:</label><br>
+                        <textarea id='commento' name='commento' rows='4' cols='50'></textarea>
+                        <input type='submit' value='Invia'>
+                    </form>
+                    </td>
+                    <td>Prezzo: €21,95</td> 
+                </tr>
+                <tr>
+                    <td><img src='img/prodotto4.jpg' alt='fire_tv_stick'class="amazon-image"></td><br>
+                    <td colspan="2" align="center">FIRE STICK TV AMAZON</td>
+                    <td><a href='https://is.gd/s7XhAK'class='amazon-link'>Fire TV Stick con telecomando vocale Alexa (con comandi per la TV) | Streaming in HD</a>
+                    <form>
+                        <label for='commento'>Lascia un commento:</label><br>
+                        <textarea id='commento' name='commento' rows='4' cols='50'></textarea>
+                        <input type='submit' value='Invia'>
+                    </form>
+                    </td>
+                    <td>Prezzo: €44,99</td>
+                </tr> 
+                <tr>
+                    <td><img src='img/prodotto5.jpg' alt='varta_batterie_D'class="amazon-image"></td><br>
+                    <td colspan="2" align="center">BATTERIE VARTA TIPO D</td>
+                    <td><a href='https://is.gd/ULRqVp'class='amazon-link'>Varta Industrial Batterie D Mono Batteria Alcaline Lr20 Confezione Da 20, Blu</a>
+                    <form>
+                        <label for='commento'>Lascia un commento:</label><br>
+                        <textarea id='commento' name='commento' rows='4' cols='50'></textarea>
+                        <input type='submit' value='Invia'>
+                    </form>
+                    </td>
+                    <td>Prezzo: €24,99</td> 
+                </tr>
+        </table>
+    </div>
+    <footer id="footer"> <!--Creo il tag e id footer che poi userò qui sotto per richiamarlo e cosi modificare l'indirizzo-->
+        <p>Macarena S.A. - Indirizzo: Via Montenapoleone, 12 - 20100 Milano></p>
+        <button onclick = 'cambiaIndirizzo()'>Cambia Indirizzo</button> <!--Uso il bottone per cambiare al nuovo indirizzo-->
+        <script>
+            function cambiaIndirizzo(){ //Uso la funzione e creo (variabile)'nuovoIndirizzo'per cambiare al nuovo indirizzo 
+                let nuovoIndirizzo = 'Macarena S.A. - Indirizzo: Via Macarena, 96 - 20100 Milano';
+                let footer = document.getElementById('footer'); //Mi serve per selezionare l'elemento footer tramite l'id stesso
+                footer.textContent = nuovoIndirizzo;            //Uso la proprietà textContent per il nuovo (valore) indirizzo
+            }
+        </script>
+    </footer>
+    <script>
+        function toggleImageVisibility() { //Uso la funzione toogleImageVisibility per levare/mettere l'immagini dei prodotti
+        let amazonImages = document.querySelectorAll('.amazon-image');
+        amazonImages.forEach(function(image) {
+            image.classList.toggle('hidden');
+        });
+    }
+
+    function changePriceColor() { //Uso la funzione changePriceColor per cambiare il colore dei prezzi
+        let prices = document.querySelectorAll('table tr:not(last-child) td:last-child');//Tra () del querySelectorAll vado a
+                                                                                         //prendere solo il 5to child prezzo   
+        prices.forEach(function(price) {
+            let randomColor = getRandomColor();
+            price.style.color = randomColor;
+        });
+    }
+
+    function getRandomColor() {
+        let letters = '0123456789ABCDEF';
+        let color = '#';
+
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.round(Math.random() * 15)];
+        }
+        return color;
+    }
+
+    </script>
+    <button onclick="toggleImageVisibility()">Mostra/Nascondi Immagini</button> 
+    <button onclick="changePriceColor()">Cambia Colore Prezzi</button>
+</body>
+</html>
